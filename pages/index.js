@@ -4,13 +4,19 @@ import styles from '../styles/Home.module.css'
 import { useState } from 'react'
 
 export default function Home() {
-
-  const [cookies, cstands] = useState('');
+// value (getter), set function to value (setter)
+  const [cstands, setCstands] = useState('');
 
   function submitHandler(event) {
-    event.preventdefault();
-    cstands(event.target.cookies.value)
-    event.target().reset();
+    const standData ={
+      location:event.target.location.value,
+      minCustomers:event.target.minCS.value,
+      maxCustomers:event.target.maxCS.value,
+      avgCookies:event.target.avgCps.value
+    }
+    event.preventDefault();
+    setCstands(JSON.stringify(standData))
+    event.target.reset();
   }
 
   return (
@@ -18,7 +24,7 @@ export default function Home() {
       <Header />
       <main className='bg-white py-6 px-8'>
         <Form onSubmit={submitHandler}/>
-        <Response cookies={cookies} className='py-6 px-8'/>
+        {/* <Response cookies={cookies} className='py-6 px-8'/> */}
         <Cookie_Stands className='py-6 px-8' cstands={cstands}/>
         <p className='py-6 px-8'>Report Table coming Soon...</p>
       </main>
@@ -33,7 +39,6 @@ function Header() {
     <h1 className='text-4xl py-.5 px-.5'>
       Cookie Stand Admin
     </h1>
-
   </header>
 }
 
@@ -49,7 +54,7 @@ function Form(props) {
   <div name='cookies'>
     <div className='grid grid-cols-2 px-4 py-100 pb-4'>
       <p>Location</p>
-      <input  placeholder='location name' required className='pr-4'/>
+      <input name='location' placeholder='location name' required className='pr-4'/>
       <p></p>
     </div>
 
@@ -58,9 +63,9 @@ function Form(props) {
       <p>Maximum Customer per Hour</p>
       <p>Average Cookies per Sale</p>
       <p></p>
-      <input placeholder='Min Cust PH' required />
-      <input placeholder='Maxi Cust PH' required />
-      <input placeholder='Avg Cookies per Sale' required />
+      <input name='minCS' placeholder='Min Cust PH' required />
+      <input name='maxCS' placeholder='Maxi Cust PH' required />
+      <input name='avgCps' placeholder='Avg Cookies per Sale' required />
     </div>
       <button className='px-4 py-300 bg-blue-300'>Create</button>
     </div>
@@ -75,6 +80,4 @@ function Response(props) {
 function Cookie_Stands(props) {
   return (
     <div className='flex items-center justify-center'>{props.cstands}</div>)
-  
-  
 }
