@@ -1,4 +1,4 @@
-LAB - Class 37,38, 39
+LAB - Class 37,38, 39,41
 # Project: Cookie Stand
 **Author:** Michelle Salazar
 ----
@@ -9,11 +9,11 @@ LAB - Class 37,38, 39
 • back-end server url (when applicable) https://cookie-stand-api-ms.herokuapp.com/
 
 
-• front-end application (when applicable) 
+• front-end application (when applicable) https://vercel.com/misalz/cookie-stand-admin/4Wi4TyCxQTAqSPG9uWG3LKPqWenx
 
 
 ## Setup
-see .env file
+see sample.env file
 
 **PORT -** Port Number
 8000
@@ -27,6 +27,7 @@ heffalump.db.elephantsql.com
 Start local server -> npm run dev
 
 ## How to use your library (where applicable)
+npm install
 
 ## Tests
 
