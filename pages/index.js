@@ -1,4 +1,4 @@
-import LoginForm from '../components/LogInForm'
+import LogInForm from '../components/LogInForm'
 import CookieStandAdmin from '../components/CookieStandAdmin'
 import { useAuth } from '../contexts/auth'
 

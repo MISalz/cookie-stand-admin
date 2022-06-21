@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export default function LoginForm({ onSubmit }) {
+export default function LogInForm({ onSubmit }) {
 
     const initialValues = {
         username: 'admin',
