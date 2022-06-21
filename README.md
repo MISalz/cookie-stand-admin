@@ -6,7 +6,7 @@ LAB - Class 37,38, 39
 
 ## Links and Resources
 
-• back-end server url (when applicable)<br>
+• back-end server url (when applicable) https://cookie-stand-api-ms.herokuapp.com/
 
 • front-end application (when applicable)
 
