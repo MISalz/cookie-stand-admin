@@ -6,10 +6,10 @@ LAB - Class 37,38, 39,41
 
 ## Links and Resources
 
-• back-end server url (when applicable) https://cookie-stand-api-ms.herokuapp.com/
+• back-end server url -Heroku- https://cookie-stand-api-ms.herokuapp.com/
 
 
-• front-end application (when applicable) https://vercel.com/misalz/cookie-stand-admin/4Wi4TyCxQTAqSPG9uWG3LKPqWenx
+• front-end application -vercel- https://vercel.com/misalz/cookie-stand-admin/4Wi4TyCxQTAqSPG9uWG3LKPqWenx
 
 
 ## Setup
