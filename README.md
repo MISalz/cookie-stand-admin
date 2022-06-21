@@ -1,5 +1,7 @@
 LAB - Class 37,38, 39,41
+
 # Project: Cookie Stand
+
 **Author:** Michelle Salazar
 ----
 ## Problem Domain
