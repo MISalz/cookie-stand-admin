@@ -8,7 +8,9 @@ LAB - Class 37,38, 39
 
 • back-end server url (when applicable) https://cookie-stand-api-ms.herokuapp.com/
 
+
 • front-end application (when applicable) 
+
 
 ## Setup
 see .env file
@@ -17,6 +19,7 @@ see .env file
 8000
 
 **DATABASE_URL -** URL to the running 
+
 heffalump.db.elephantsql.com 
 
 *How to initialize/run your application (where applicable)*
