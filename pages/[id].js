@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import { useAuth } from '../contexts/auth'
 import { useEffect } from 'react'
-import useResource from '../hooks/useResouce'
+import useResource from '../hooks/useResource'
 
 export default function StandDetail() {
     const router = useRouter();
