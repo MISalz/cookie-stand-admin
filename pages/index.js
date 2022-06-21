@@ -1,9 +1,9 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import { useState } from 'react'
+import LoginForm from '../components/login-form'
+import CookieStandAdmin from '../components/cookie-stand-admin'
+import { useAuth } from '../context/auth'
 
 export default function Home() {
+
 // value (getter), set function to value (setter)
   const [cstands, setCstands] = useState('');
 
@@ -81,3 +81,4 @@ function Cookie_Stands(props) {
   return (
     <div className='flex items-center justify-center'>{props.cstands}</div>)
 }
+
