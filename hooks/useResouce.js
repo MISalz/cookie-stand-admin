@@ -1,12 +1,12 @@
-import axios from 'axios';
-import useSWR from 'swr';
+import axios from 'axios'
+import useSWR from 'swr'
 
 export const apiUrl = process.env.NEXT_PUBLIC_RESOURCE_URL;
-import { useAuth } from '../context/auth';
+import { useAuth } from '../contexts/auth'
 
-export default function resource() {
+export default function useResource() {
 
-    const { tokens, logout } = useAuth();
+    const { tokens, logout } = useAuth()
 
     const { data, error, mutate } = useSWR([apiUrl, tokens], fetchResource);
 
@@ -21,8 +21,8 @@ export default function resource() {
 
             return response.data;
 
-        } catch (err) {
-            handleError(err);
+        } catch (error) {
+            handleError(error);
         }
     }
 
@@ -31,8 +31,8 @@ export default function resource() {
         try {
             await axios.post(apiUrl, info, config());
             mutate(); // mutate causes complete collection to be refetched
-        } catch (err) {
-            handleError(err);
+        } catch (error) {
+            handleError(error);
         }
     }
 
@@ -42,8 +42,8 @@ export default function resource() {
             const url = apiUrl + id;
             await axios.delete(url, config());
             mutate(); // mutate causes complete collection to be refetched
-        } catch (err) {
-            handleError(err);
+        } catch (error) {
+            handleError(error);
         }
     }
 
@@ -60,11 +60,11 @@ export default function resource() {
             headers: {
                 'Authorization': 'Bearer ' + tokens.access
             }
-        };
+        }
     }
 
-    function handleError(err) {
-        console.error(err);
+    function handleError(error) {
+        console.error(error);
         // currently just log out on error
         // but a common error will be short lived token expiring
         // STRETCH: refresh the access token when it has expired
@@ -78,5 +78,5 @@ export default function resource() {
         createResource,
         deleteResource,
         updateResource,
-    };
+    }
 }

@@ -1,6 +1,6 @@
 import CookieStandForm from './createform'
 import CookieStandTable from './reporttable'
-import resource from '../hooks/resource'
+import resource from '../hooks/useResouce'
 
 export default function CookieStandAdmin({ onLogout }) {
 

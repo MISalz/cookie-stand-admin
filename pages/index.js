@@ -1,6 +1,6 @@
 import LoginForm from '../components/LogInForm'
 import CookieStandAdmin from '../components/CookieStandAdmin'
-import { useAuth } from '../context/auth'
+import { useAuth } from '../contexts/auth'
 
 export default function Home() {
 

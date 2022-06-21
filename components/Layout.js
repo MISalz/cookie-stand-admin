@@ -1,13 +1,13 @@
-import { useAuth } from '../context/auth'
-import resource from '../hooks/resource'
-import CookieStandHeader from '../components/header'
-import CookieStandFooter from '../components/footer'
+import { useAuth } from '../contexts/auth'
+import useResource from '../contexts/auth'
+import CookieStandHeader from '../components/Header'
+import CookieStandFooter from '../components/Footer'
 import Head from 'next/head'
 
 export default function Layout({ children }) {
 
     const { user, logout } = useAuth();
-    const { resources } = resource()
+    const { resources } = useResource();
 
 
     return (

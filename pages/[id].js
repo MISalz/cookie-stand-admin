@@ -1,12 +1,12 @@
 import { useRouter } from 'next/router'
-import { useAuth } from '../context/auth'
+import { useAuth } from '../contexts/auth'
 import { useEffect } from 'react'
-import resource from '../hooks/resource'
+import useResource from '../hooks/useResouce'
 
 export default function StandDetail() {
     const router = useRouter();
     const { user } = useAuth();
-    const { resources, error } = resource();
+    const { resources, error } = useResource();
 
     useEffect(() => {
         if (error || !user) {
