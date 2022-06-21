@@ -1,10 +1,10 @@
 import CookieStandForm from './CreateForm'
 import CookieStandTable from './ReportTable'
-import resource from '../hooks/useResource'
+import useResource from '../hooks/useResource'
 
 export default function CookieStandAdmin({ onLogout }) {
 
-    const { resources, createResource, deleteResource, error } = resource();
+    const { resources, createResource, deleteResource, error } = useResource();
 
     if (error) {
         onLogout();
