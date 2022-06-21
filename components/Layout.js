@@ -1,5 +1,5 @@
 import { useAuth } from '../contexts/auth'
-import useResource from '../contexts/auth'
+import useResource from '../hooks/useResouce'
 import CookieStandHeader from '../components/Header'
 import CookieStandFooter from '../components/Footer'
 import Head from 'next/head'

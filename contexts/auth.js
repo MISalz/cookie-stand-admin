@@ -1,6 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 import jwt from 'jsonwebtoken';
-import axios from 'axios';
+import axios from 'axios'
 const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 const tokenUrl = baseUrl + '/api/token/';
 
@@ -8,9 +8,7 @@ const AuthContext = createContext();
 
 export function useAuth() {
     const auth = useContext(AuthContext);
-    if (!auth) {
-        throw new Error('You forgot AuthProvider!');
-    }
+    if (!auth) throw new Error('You forgot AuthProvider!');
     return auth;
 }
 
@@ -36,7 +34,7 @@ export function AuthProvider(props) {
                 email: decodedAccess.email,
                 id: decodedAccess.user_id
             },
-        };
+        }
 
         setState(prevState => ({ ...prevState, ...newState }));
     }
@@ -45,7 +43,7 @@ export function AuthProvider(props) {
         const newState = {
             tokens: null,
             user: null,
-        };
+        }
         setState(prevState => ({ ...prevState, ...newState }));
     }
 
