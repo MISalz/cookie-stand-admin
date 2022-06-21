@@ -6,7 +6,7 @@ export default function Home() {
 
     const { user, login, logout } = useAuth();
 
-    if (!user) return <LoginForm onSubmit={login} />
+    if (!user) return <LogInForm onSubmit={login} />
 
     return <CookieStandAdmin
         onLogout={logout}
